@@ -26,8 +26,6 @@ Business Insights
 
 •	Identify high-value customers for loyalty or VIP programs.
 
-•	Segment customers into spending tiers (e.g., Premium, Regular, Low Value).
-
 •	Analyze customer purchasing behavior for targeted marketing campaigns.
 
 •	Measure customer lifetime spending for retention strategies.
@@ -37,35 +35,27 @@ Business Insights
 SQL Concepts Demonstrated
 This query demonstrates several fundamental SQL concepts commonly used in data analysis and reporting.
 1. ✅Common Table Expression (CTE)
-•	Uses a CTE (WITH customer_spending AS) to create a temporary result set.
-•	Improves query readability and makes complex logic easier to maintain.
 •	Allows the aggregated results to be referenced in the final SELECT statement.
+
 2. ✅INNER JOIN
-•	Joins the orders and products tables using product_id.
-•	Combines order quantities with product selling prices to calculate spending.
-•	Ensures only matching records from both tables are included.
+•	Ensures only matching records from both tables are included to ensure customers spending contribution.
+
 3. ✅ Aggregate Function (SUM)
-•	Uses SUM() to calculate the total spending for each customer.
 •	Aggregates multiple order records into a single spending value.
+
 4. ✅Arithmetic Operations
-•	Multiplies quantity by selling_price to calculate the value of each order.
-•	Demonstrates performing calculations directly within a SQL query.
+•	Demonstrates performing operational calculations to identify customer purchasing behaviour.
+
 5. ✅ GROUP BY
-•	Groups records by customer_id.
-•	Produces one summarized result for each customer.
-6. ✅Column Aliasing
-•	Assigns a meaningful name (total_spending) to the calculated aggregate value.
-•	Improves readability and makes the output easier to interpret.
-7. ✅Table Aliasing
-•	Uses table aliases (ord and prod) to simplify references and improve query readability.
-8. ✅Data Aggregation
+•	Produces aggregated summarized result for each customer.
+
+6. ✅Column & Table Aliasing
+•	Assigns an attribute to improve query readability and avoid ambiguity when using multiple tables in one query.
+
+7. ✅Data Aggregation
 •	Converts detailed transactional data into summarized customer-level insights.
-•	Supports reporting and business intelligence analysis.
-9. ✅ Result Reusability
+
+8. ✅ Result Reusability
 •	Separates the aggregation logic from the final query using a CTE, making it easier to extend with additional filtering, ranking, or analysis in subsequent queries.
-Notes
-•	Every product_id in the orders table should exist in the products table.
-•	Customers without any orders will not appear in the result.
-•	The query returns one record per customer.
 
 Tools Used : MySQL Workbench
