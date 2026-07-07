@@ -1,6 +1,7 @@
 # SQL-Project-for-Customer-Orders
 
-Customer Total Spending Analysis
+**SQL 1 - Customer Total Spending Analysis
+**
 Project Overview
 This SQL query calculates the total amount spent by each customer by combining order information with product prices. It uses a Common Table Expression (CTE) to aggregate spending for every customer.
 
