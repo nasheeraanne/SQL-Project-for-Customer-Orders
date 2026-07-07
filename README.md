@@ -3,6 +3,7 @@
 Customer Total Spending Analysis
 Project Overview
 This SQL query calculates the total amount spent by each customer by combining order information with product prices. It uses a Common Table Expression (CTE) to aggregate spending for every customer.
+
 Objective
 Determine how much each customer has spent across all their orders.
 SQL Features Used
@@ -10,27 +11,27 @@ SQL Features Used
 •	JOIN
 •	SUM() aggregation
 •	GROUP BY
-Query Logic
-1.	Join the orders table with the products table using product_id.
-2.	Calculate the total value of each order using:
-quantity * selling_price
-3.	Sum all order values for each customer.
-4.	Store the results in a CTE named customer_spending.
-5.	Display the aggregated spending for every customer.
 
 Analysis Outcome
 The query calculates the total spending for each customer by multiplying the quantity purchased by the selling price of each product and summing these values across all orders.
 Key Findings
 •	Each customer is assigned a single total_spending value representing their cumulative purchases.
+
 •	Customers with multiple orders have their spending aggregated into one total.
+
 •	The result identifies the customers who contribute the most revenue.
-•	Customers with no recorded orders are excluded from the output because the query uses an INNER JOIN and only processes existing orders.
+
 •	The output can be used to rank customers based on their purchasing value.
 Business Insights
+
 •	Identify high-value customers for loyalty or VIP programs.
+
 •	Segment customers into spending tiers (e.g., Premium, Regular, Low Value).
+
 •	Analyze customer purchasing behavior for targeted marketing campaigns.
+
 •	Measure customer lifetime spending for retention strategies.
+
 •	Support revenue reporting by showing each customer's financial contribution.
 
 SQL Concepts Demonstrated
